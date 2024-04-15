@@ -17,12 +17,12 @@ export default class CandidatoVagaCtrl {
           await candidatoVaga.gravar();
           res.status(200).json({
             status: true,
-            mensagem: "Reserva vinculada ao veículo!",
+            mensagem: "Inscrição realizada com sucesso!",
           });
         } catch (erro) {
           res.status(500).json({
             status: false,
-            mensagem: "Erro ao vincular reserva: " + erro.message,
+            mensagem: "Erro ao realizar a inscrição: " + erro.message,
           });
         }
       }
@@ -48,12 +48,12 @@ export default class CandidatoVagaCtrl {
           await candidatoVaga.atualizar();
           res.status(200).json({
             status: true,
-            mensagem: "Reserva atualizada com sucesso!",
+            mensagem: "Inscrição atualizada com sucesso!",
           });
         } catch (erro) {
           res.status(500).json({
             status: false,
-            mensagem: "Erro ao atualizar reserva: " + erro.message,
+            mensagem: "Erro ao atualizar inscrição: " + erro.message,
           });
         }
       }
@@ -75,13 +75,13 @@ export default class CandidatoVagaCtrl {
       } catch (erro) {
         res.json({
           status: false,
-          mensagem: "Não foi possível encontrar a reserva: " + erro.message,
+          mensagem: "Não foi possível encontrar a inscrição: " + erro.message,
         });
       }
     } else {
       res.status(400).json({
         status: false,
-        mensagem: "Por favor, utilize o método GET para consultar reserva!",
+        mensagem: "Por favor, utilize o método GET para consultar a inscrição!",
       });
     }
   }
@@ -107,19 +107,19 @@ export default class CandidatoVagaCtrl {
         } catch (erro) {
           res.status(500).json({
             status: false,
-            mensagem: "Erro ao excluir reserva: " + erro.message,
+            mensagem: "Erro ao excluir inscrição: " + erro.message,
           });
         }
       } else {
         res.status(400).json({
           status: false,
-          mensagem: "Informe os dados da reserva!",
+          mensagem: "Informe os dados da inscrição!",
         });
       }
     } else {
       res.status(400).json({
         status: false,
-        mensagem: "Utilize o método DELETE para excluir um vínculo",
+        mensagem: "Utilize o método DELETE para excluir a inscrição",
       });
     }
   }

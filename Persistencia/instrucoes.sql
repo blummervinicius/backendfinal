@@ -1,10 +1,10 @@
-CREATE DATABASE sistema;
+CREATE DATABASE fsiitf;
 
-USE sistema;
+USE fsiitf;
 
 CREATE TABLE candidato (
 
-    CPF VARCHAR(11) PRIMARY KEY,
+    CPF VARCHAR(15) PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     idade INT NOT NULL, 
     email VARCHAR(100) NOT NULL,
